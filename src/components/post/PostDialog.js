@@ -75,6 +75,7 @@ class PostDialog extends Component {
     window.history.pushState(null, null, this.state.oldPath);
     this.setState({ open: false });
     this.props.clearErrors();
+    
   };
 
   render() {

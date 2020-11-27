@@ -19,7 +19,7 @@ class Navbar extends Component {
     // console.log(this.props)
     const { authenticated } = this.props;
     return (
-      <AppBar>
+      <AppBar elevation={0}>
         <Toolbar className="nav-container">
           {authenticated ? (
             <Fragment>

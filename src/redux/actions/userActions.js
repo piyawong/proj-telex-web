@@ -90,8 +90,8 @@ export const uploadImage = (formData) => (dispatch) => {
   axios
     .post('/user/uploadProfileImage', formData)
     .then(( res ) => {
-      console.log ("check updata!!!");
-      console.log(res.data);
+      // console.log ("check updata!!!");
+      // console.log(res.data);
       dispatch(getUserData());
       dispatch({type : UPDATE_POST,
                 payload:res.data});

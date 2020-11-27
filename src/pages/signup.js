@@ -15,7 +15,12 @@ import { connect } from 'react-redux';
 import { signupUser } from '../redux/actions/userActions';
 
 const styles = (theme) => ({
-  ...theme
+  ...theme,
+  button: {
+    boxShadow: 'none',
+    height: '42px',
+    width: '380px'
+  }
 });
 
 class signup extends Component {
@@ -65,7 +70,7 @@ class signup extends Component {
       <Grid container className={classes.form}>
         <Grid item sm />
         <Grid item sm>
-          <img src={AppIcon} alt="monkey" className={classes.image} />
+          <img src={AppIcon} alt="telex" className={classes.image} />
           <Typography variant="h2" className={classes.pageTitle}>
             SignUp
           </Typography>
@@ -75,6 +80,7 @@ class signup extends Component {
               name="email"
               type="email"
               label="Email"
+              variant="outlined"
               className={classes.textField}
               helperText={errors.email}
               error={errors.email ? true : false}
@@ -87,6 +93,7 @@ class signup extends Component {
               name="password"
               type="password"
               label="Password"
+              variant="outlined"
               className={classes.textField}
               helperText={errors.password}
               error={errors.password ? true : false}
@@ -99,6 +106,7 @@ class signup extends Component {
               name="confirmPassword"
               type="password"
               label="Confirm Password"
+              variant="outlined"
               className={classes.textField}
               helperText={errors.confirmPassword}
               error={errors.confirmPassword ? true : false}
@@ -111,6 +119,7 @@ class signup extends Component {
               name="handle"
               type="text"
               label="Handle"
+              variant="outlined"
               className={classes.textField}
               helperText={errors.handle}
               error={errors.handle ? true : false}
@@ -123,6 +132,7 @@ class signup extends Component {
               name="name"
               type="text"
               label="name"
+              variant="outlined"
               className={classes.textField}
               helperText={errors.handle}
               error={errors.handle ? true : false}
@@ -138,7 +148,8 @@ class signup extends Component {
             <Button
               type="submit"
               variant="contained"
-              color="primary"
+              color="secondary"
+              disableElevation
               className={classes.button}
               disabled={loading}
             >
